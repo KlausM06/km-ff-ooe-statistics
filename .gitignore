@@ -1,5 +1,8 @@
-# File containing sensitive data
+# Files containing sensitive data
 Scanner/mdbLogin.py
+
+# Files not relevant for the project
+**/fly.toml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
