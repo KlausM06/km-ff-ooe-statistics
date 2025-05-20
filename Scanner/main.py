@@ -1,6 +1,7 @@
 from DBConnector import insert_operations, ping
 import requests
 import time
+import os
 
 # This URL is used to fetch the operations from the ooelfv API
 FF_API_URL = "https://cf-einsaetze.ooelfv.at/webext2/rss/json_2tage.txt"
@@ -16,7 +17,7 @@ def main():
         print(f"Timestamp: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}")
         fetchAndInsertOperations()
         print("--------------------------------------------------------------------------------")
-        time.sleep(3600) # time in seconds to wait before fetching the operations again
+        time.sleep(float(os.getenv("SCAN_INTERVAL",3600))) # time in seconds to wait before fetching the operations again
         
 
 def fetchAndInsertOperations():
