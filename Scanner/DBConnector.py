@@ -15,8 +15,6 @@ db = client["ff-statistics"]
 # enter the name of your collection containing the operations
 operations_coll = db["operations"]
 
-operations_coll.delete_many({ "status": "offen" }) # delete all operations that of type "SELBST"
-
 def insert_operations(operations: list):
     """
     This function inserts a list of operations into the database.
