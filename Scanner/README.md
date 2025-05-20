@@ -1,0 +1,2 @@
+# FF-OOE-Statistics Scanner
+The Scanner application is a service which regularly fetches the fire department operations of the last 48 hours from the [ooelfv-api](https://cf-einsaetze.ooelfv.at/webext2/rss/json_2tage.txt) in a customizible interval.
