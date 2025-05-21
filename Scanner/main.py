@@ -46,7 +46,7 @@ def fetchAndInsertOperations():
 
 def cleanOperations(operations: list,key: str = "einsatzart", value: str = "empty"):
     """
-    This function removes all operations that where the given key is equal to the given value
+    This function removes all operations that where the given key is equal to the given value\n
     :param operations: list of operations
     :param key: key to check for
     :param value: value to check for
@@ -62,7 +62,7 @@ def cleanOperations(operations: list,key: str = "einsatzart", value: str = "empt
 
 def reformatOperations(operations: list):
     """
-    This function reformats the operations to be more compact and have the _id key set as the operation id (instead of "num1")
+    This function reformats the operations to be more compact and have the _id key set as the operation id (instead of "num1")\n
     :param operations: list of operations
     :return: list of operations with the _id key set as the operation id (instead of "num1")
     """
@@ -75,7 +75,7 @@ def reformatOperations(operations: list):
 
 def fetch_operations():
     """
-    Fetch operations from the ooelfv API and return them as a list of dictionaries.
+    Fetch operations from the ooelfv API and return them as a list of dictionaries.\n
     :return: list of operations
     """
     print("Fetching operations from the API...")
