@@ -43,14 +43,15 @@ def insert_operations(operations: list):
         return
     
     # create log entry
-    # this can be commented out if you don't want to use the logs collection
-    log = {
-        "inserted_count": inserted_count,
-        "skipped_count": skipped_count,
-        "total_operations": len(operations),
-        "timestamp": (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
-    }
-    insert_log(log)
+    # if you want to disable logging, set the environment variable doLog to false or something else or comment out the following lines
+    if os.getenv("SCAN_doLog","true") == "true":
+        log = {
+            "inserted_count": inserted_count,
+            "skipped_count": skipped_count,
+            "total_operations": len(operations),
+            "timestamp": (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
+        }
+        insert_log(log)
 
     
 
