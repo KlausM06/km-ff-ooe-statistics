@@ -1,7 +1,7 @@
 FROM python:3.11-slim
 
 # You can set the MongoDB API key here
-# ENV MDB_API="your_mdb_api_key"
+# ENV MDB_URI="your_mdb_api_key"
 
 # set the interval in seconds for the scanner to check for new data
 ENV SCAN_INTERVAL=3600

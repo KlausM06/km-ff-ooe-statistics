@@ -2,13 +2,9 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from pymongo.errors import BulkWriteError
 import os
-# If you are not deploying the scanner as Docker Container,
-# create a new file called mdbLogin.py and add a class called MdbConfig
-# which contains the API_URL as a class variable and import it here
-from mdbLogin import MdbConfig
 
-#retrieving the API_URL from the environment variable or using the default value 
-client = MongoClient(os.getenv("MDB_API", MdbConfig.API_URL), server_api=ServerApi("1"))
+#retrieving the Mongodb connection String from the environment variable or enter it manually
+client = MongoClient(os.getenv("MDB_URI","your-mongodb-connection-string"), server_api=ServerApi("1"))
 
 # enter your database name
 db = client["ff-statistics"]

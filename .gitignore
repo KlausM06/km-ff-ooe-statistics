@@ -1,6 +1,3 @@
-# Files containing sensitive data
-Scanner/mdbLogin.py
-
 # Files not relevant for the project
 **/fly.toml
 
