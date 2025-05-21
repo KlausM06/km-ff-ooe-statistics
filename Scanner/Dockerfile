@@ -4,7 +4,7 @@ FROM python:3.11-slim
 # ENV MDB_URI="your_mdb_api_key"
 
 # You can deactivate the logging of the scanner in the container by uncommenting the following line
-# ENV scanner_doLog="false"
+# ENV SCAN_doLog="false"
 
 # set the interval in seconds for the scanner to check for new data
 ENV SCAN_INTERVAL=3600
