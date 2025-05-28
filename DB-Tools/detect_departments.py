@@ -5,7 +5,7 @@ def detect_departments():
     """
     This function detects the all fire departments from the operations.\n
     It will save them to the departments collection and will skip those who are already saved.\n
-    :return: List of departments
+    :return: none
     """
     try:
         operations = list(oper_coll.find({}))
