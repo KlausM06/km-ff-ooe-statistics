@@ -35,5 +35,6 @@ def extract_operation_type(operation):
         "description": operation["einsatztyp"]["text"]
     }
 
-
+opty_coll.drop()  
+opty_coll.create_index([("description", 1)], unique=True)
 detect_operation_types()
