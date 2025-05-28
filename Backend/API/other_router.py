@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-import Tools.DBConnection as db
+from Tools import DBConnection as db
 
 router = APIRouter()
 
