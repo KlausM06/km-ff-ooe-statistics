@@ -3,8 +3,8 @@ from pymongo.errors import BulkWriteError
 
 def detect_districts():
     """
-    This function detects the all opertaion types from the operations.\n
-    It will save them to the operation_types collection and will skip those who are already saved.\n
+    This function detects the all districts from the operations.\n
+    It will save them to the districts collection and will skip those who are already saved.\n
     :return: none
     """
     try:
